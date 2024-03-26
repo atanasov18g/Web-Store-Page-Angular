@@ -1,0 +1,92 @@
+.events-container {
+    background-image: url(../../../assets/images/home_BG1.png);
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    ;
+}
+
+.events-container img {
+    width: 200px;
+    height: 220px;
+}
+
+.blog-wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blog-card {
+    transition:(.3s);
+    max-width: 300px;
+    margin: 15px;
+    background: #fff;
+    border: 1px solid #CB6074;
+    text-align: center;
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.card-img img {
+    opacity: 0.8;
+    max-height: 180px;
+    width: 100%;
+    border-bottom: 4px solid #CB6074;
+}
+.card-img img:hover{
+    opacity: 0.5;
+    background-color: #eb8194; ;
+}
+
+.card-img {
+    position: relative;
+    text-align: center;
+    background: #CB6074;
+}
+
+
+.card-details {
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #3C3C3C;
+}
+
+.card-details span {
+    padding: 0 30px;
+}
+
+.card-details i {
+    margin-right: 5px;
+}
+
+.card-text {
+    padding: 30px 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+}
+
+.read-more {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    background: #CB6074;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.read-more:hover {
+    background: #c0203e;
+}

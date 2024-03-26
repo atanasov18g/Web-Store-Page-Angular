@@ -1,0 +1,13 @@
+<top-header></top-header>
+
+<div id="navcontainer">
+    <div class="Logo--Wrapper">
+        <p class="Logo">
+           <a class="header-anchor" routerLink="Home">Afrikart</a> 
+        </p>
+        <fa-icon routerLink="Home" class="faHippo" [icon]="faHippo"></fa-icon>
+    </div>
+    <ul id="navlist">
+        <li><a class="list-anchors" *ngFor="let menuItem of MenuItems" routerLink="{{menuItem}}">{{menuItem}}</a></li>
+    </ul>
+</div>

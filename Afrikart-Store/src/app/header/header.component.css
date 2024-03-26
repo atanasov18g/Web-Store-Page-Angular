@@ -1,0 +1,72 @@
+#navcontainer {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../../assets/images/header-art-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -390px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#navcontainer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#navcontainer li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo--Wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    font-size: 75px;
+    font-family: "Concert One", sans-serif;
+}
+
+.header-anchor{
+    all: unset;
+}
+
+.faHippo {
+    font-size: 58px;
+}
+
+#navcontainer .list-anchors {
+    margin: 10px 60px;
+    padding: 16px 66px;
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    background-image: url(../../assets/images/header-art-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #363636;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+#navcontainer .list-anchors:link,
+#navlist .list-anchors:visited {
+    color: #e69500;
+    text-decoration: none;
+}
+
+#navcontainer .list-anchors:hover {
+    background-image: url(../../assets/images/header-art-image.png) repeat-x #147bba;
+    color: #fab885;
+}

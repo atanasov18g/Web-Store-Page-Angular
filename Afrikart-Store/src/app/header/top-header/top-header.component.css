@@ -1,0 +1,15 @@
+.topheader--ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(26, 29, 41) 70.2%); 
+    
+}
+
+li {
+    color: wheat;
+    display: inline;
+    padding: 10px;
+}

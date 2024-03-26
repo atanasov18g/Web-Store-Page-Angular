@@ -1,0 +1,14 @@
+<div class="all-product-list--container">
+    <ng-container *ngFor="let prod of products">
+
+        <single-product [product]="prod"></single-product>
+
+    </ng-container>
+</div>
+
+<!-- 
+<div *ngIf="selectedFilterRadioButtonParent === 'All' 
+|| (prod.is_in_inventory && prod.is_in_inventory.toString() === selectedFilterRadioButtonParent)
+|| (prod.is_in_inventory && prod.is_on_sale.toString() !== selectedFilterRadioButtonParent)
+">
+</div> -->
