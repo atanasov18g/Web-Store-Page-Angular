@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #00005c;
+    --text-color: mix(#000, primary-color, 64%);
+}
+
+/* .filter-container {
+    margin: 10px 0px;
+    padding: 0px 20vh;
+}
+
+.first {
+    margin-left: 10px;
+    margin-right: 5px;
+} */
+
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: 27px;
+}
+
+.button-wrap {
+    position: relative;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 0px 20px;
+    /* @media (max-width: 40em) {
+        margin-top: -1.5em;
+    } */
+}
+
+h1 {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+span{
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.button-label {
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 0.5em;
+    cursor: pointer;
+    color: #292929;
+    border-radius: 0.25em;
+    background: #efefef;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    user-select: none;
+
+    &:hover {
+        background: #c9c7c7;
+        color: #1b1b1b;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+    }
+
+    &:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    @media (max-width: 4em) {
+        padding: 0em 1em 3px;
+        margin: 0.25em;
+    }
+}
+
+#yes-button:checked+.button-label {
+    background: #f06a35;
+    color: #efefef;
+
+    &:hover {
+        background: rgb(194, 65, 5);
+        color: rgb(203, 221, 203);
+    }
+}
+
+#no-button:checked+.button-label {
+    background: rgb(243, 250, 146);
+    color: white;
+
+    &:hover {
+        background: rgb(231, 179, 83);
+        color: rgb(226, 209, 209);
+    }
+}
+
+#maybe-button:checked+.button-label {
+    background: rgb(44, 182, 206);
+    color: rgb(211, 220, 224);
+
+    &:hover {
+        background: rgb(2, 103, 121);
+        color: rgb(157, 159, 160);
+    }
+}
+
+.hidden {
+    display: none;
+}

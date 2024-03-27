@@ -1,0 +1,48 @@
+<!-- <div class="filter-container">
+    <span>Filter:</span>
+
+    <input class="first" type="radio" name="filter" value="all" [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()">
+    <span>{{'All ('+all+')'}}</span>
+
+    <input class="first" type="radio" name="filter" value="false" [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()">
+    <span>{{'On Sale ('+onSale+')'}}</span>
+
+    <input class="first" type="radio" name="filter" value="true" [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()">
+    <span>{{'In Stock ('+inStock+')'}}</span>
+</div> -->
+
+<div class="container">
+
+    <span>Filter:</span>
+
+    <div class="button-wrap">
+        <input type="radio" name="accepts-offers" id="yes-button" class="hidden radio-label" checked
+        value="all"
+        [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()"
+        >
+        <label for="yes-button" class="button-label"></label>
+        <h1>{{'All ('+all+')'}}</h1>
+    </div>
+    <div class="button-wrap">
+        <input type="radio" name="accepts-offers" id="no-button" class="hidden radio-label" checked
+        value="false"
+        [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()"
+        >
+        <label for="no-button" class="button-label"></label>
+        <h1>{{'On Sale ('+onSale+')'}}</h1>
+    </div>
+    <div class="button-wrap">
+        <input type="radio" name="accepts-offers" id="maybe-button" class="hidden radio-label" checked
+        value="true"
+        [(ngModel)]="selectedFilterRadioButton"
+        (change)="onSelectedFilterRadioButtonChanged()"
+        >
+        <label for="maybe-button" class="button-label"></label>
+        <h1>{{'In Stock ('+inStock+')'}}</h1>
+    </div>
+</div>

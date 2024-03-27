@@ -34,7 +34,7 @@
 }
 
 .fa-book {
-    font-size: 21px;
+    font-size: 28px;
 }
 
 .wrapper {
@@ -157,11 +157,7 @@
                     border-right: solid thin rgba(255, 255, 255, 0.3);
                     height: 50%;
 
-                    i {
-                        font-size: 30px;
-                        padding: 30px;
-                        color: white;
-                    }
+                    
                 }
 
                 .remove {

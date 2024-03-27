@@ -42,7 +42,7 @@ export class ProductService {
         new Product(10, 'Kalimba', 'Zimbabwe', 'Alteration literature to or an sympathize mr imprudence. Of is ferrars subject as enjoyed or tedious cottage.',
                  'F# Minor', { wood: "Birch", skin: "Goatskin", string: "Nylon" },
                   "AMInstruments", "Percussive", 49.99, 19, true, 24, 
-                  "../../assets/images/Mbira.png", false),
+                  "../../assets/images/Kalimba.png", false),
         new Product(11, 'Iron Bells', 'Zimbabwe', 'Alteration literature to or an sympathize mr imprudence. Of is ferrars subject as enjoyed or tedious cottage.',
                   'F# Minor', { wood: "Birch", skin: "Goatskin", string: "Nylon" },
                    "AMInstruments", "Percussive", 49.99, 13, false, 15, 

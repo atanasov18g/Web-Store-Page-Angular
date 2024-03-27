@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="inside">
-        <div class="icon"><i class="fa-solid fa-book"></i></div>
+        <div class="icon"> <fa-icon class="fa-book" [icon]="faBookJournalWhills"></fa-icon> </div>
         <div class="contents">
             <table>
                 <tr>
@@ -54,7 +54,7 @@
                 </tr>
                 <tr>
                     <td>{{product.is_in_inventory ? 'Yes' : 'Not Currently Available'}}</td>
-                    <td>{{product.items_left}} Left</td>
+                    <td>{{product.items_left && product.is_in_inventory ? '10' : 'Not In Stock'}}</td>
                 </tr>
                 <tr>
                     <th class="instrument-desc-th">Instrument Description:</th>

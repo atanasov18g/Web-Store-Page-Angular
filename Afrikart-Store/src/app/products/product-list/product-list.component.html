@@ -1,14 +1,21 @@
+
+
+
+<filter-products [all]="totalProducts" [onSale]="totalProductsOnSale" [inStock]="totalProductsInStock"
+    (selectedFilterRadioButtonChanged)="onFilterChanged($event)"></filter-products>
+
+
+
+
 <div class="all-product-list--container">
-    <ng-container *ngFor="let prod of products">
 
-        <single-product [product]="prod"></single-product>
+<ng-container *ngFor="let prod of products">
+        <div *ngIf="selectedFilterRadioButtonOnParent === 'all' 
+|| (prod.is_in_inventory && prod.is_in_inventory.toString() === selectedFilterRadioButtonOnParent)
+|| (prod.is_in_inventory && prod.is_on_sale.toString() !== selectedFilterRadioButtonOnParent)
+">
 
+            <single-product [product]="prod" *ngIf="searchTextOnSibling === '' || prod.name.toLowerCase().includes(searchTextOnSibling)"></single-product>
+        </div>
     </ng-container>
 </div>
-
-<!-- 
-<div *ngIf="selectedFilterRadioButtonParent === 'All' 
-|| (prod.is_in_inventory && prod.is_in_inventory.toString() === selectedFilterRadioButtonParent)
-|| (prod.is_in_inventory && prod.is_on_sale.toString() !== selectedFilterRadioButtonParent)
-">
-</div> -->

@@ -1,0 +1,18 @@
+<div class="wrap">
+    <div class="search">
+        <input type="text" class="searchTerm" placeholder="What are you looking for?"
+         [(ngModel)]="searchText"
+        (input)="onSearchTextChanged()"
+         >
+        <button type="submit" class="searchButton">
+            <fa-icon [icon]="faSearchengin"></fa-icon>
+        </button>
+    </div>
+
+    <div>
+        <p *ngIf="searchText != ''">
+            <strong>Search result for:</strong>
+            {{searchText}}
+        </p>
+    </div>
+</div>
