@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
@@ -22,6 +22,15 @@ export class SearchBarComponent {
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
 
   onSearchTextChanged(){
+    this.searchTextChanged.emit(this.searchText);
+  }
+
+@ViewChild('searchInput',{static:true}) searchInputEl: ElementRef;
+
+
+
+  setSearchText(){
+    this.searchText = this.searchInputEl.nativeElement.value;
     this.searchTextChanged.emit(this.searchText);
   }
 

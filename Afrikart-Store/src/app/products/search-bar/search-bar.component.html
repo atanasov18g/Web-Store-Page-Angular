@@ -1,10 +1,9 @@
 <div class="wrap">
     <div class="search">
         <input type="text" class="searchTerm" placeholder="What are you looking for?"
-         [(ngModel)]="searchText"
-        (input)="onSearchTextChanged()"
+        #searchInput
          >
-        <button type="submit" class="searchButton">
+        <button type="submit" class="searchButton" (click)="setSearchText()">
             <fa-icon [icon]="faSearchengin"></fa-icon>
         </button>
     </div>

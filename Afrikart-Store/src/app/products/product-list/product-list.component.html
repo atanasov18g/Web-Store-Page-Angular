@@ -15,7 +15,7 @@
 || (prod.is_in_inventory && prod.is_on_sale.toString() !== selectedFilterRadioButtonOnParent)
 ">
 
-            <single-product [product]="prod" *ngIf="searchTextOnSibling === '' || prod.name.toLowerCase().includes(searchTextOnSibling)"></single-product>
+            <single-product [product]="prod" *ngIf="searchTextOnSibling === '' || prod.name.toLowerCase().includes(searchTextOnSibling)" (click)="selectedProduct = prod"></single-product>
         </div>
     </ng-container>
 </div>

@@ -1,0 +1,74 @@
+
+    <div class="ekart--product--details--info scroll requires-no-scroll">
+        <div class="ekart-product-detail-close" (click)="cancelProductView()">
+            <fa-icon class="fa fa-times" [icon]="faWindowClose"></fa-icon >
+        </div>
+        <div class="ekart-product-detail-image">
+            <img src={{product.imageUrl}} class="ekart-product-detail-image">
+        </div>
+
+        <div class="ekart-product-detail">
+            <div class="ekart-product-detail-name">
+                <h2>{{product.name}}</h2>
+            </div>
+            <div class="ekart-product-detail-gbc">
+                <span>{{product.brand}}</span>
+                <span>{{product.category}}</span>
+            </div>
+            <div class="ekart-product-detail-price">
+                <p>
+                    <b>Price:</b>
+                    <span *ngIf="product.is_on_sale"
+                        style="background-color: rgb(172, 44, 44); color:white"><s>${{((product.taxPrice +
+                            product.price)*(1.1)).toFixed(2)}}</s></span>
+                    <span style="background-color: rgb(82, 150, 26); color:white">${{product.price}}</span> (Tax
+                    Included)
+                </p>
+            </div>
+            <div class="ekart-product-detail-size">
+                <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                    <h4>Additional Details:</h4>
+                </div>
+                <diV style="margin-top: 20px">
+                    <p class="ekart-product-detail-available-size"> <span style="font-weight: 800;">Origin:</span>
+                        {{product.origin}}</p>
+                    <p class="ekart-product-detail-available-size"> <span style="font-weight: 800;">Key:</span>
+                        {{product.key}}</p>
+                    <div class="ekart-product-detail-available-size" style="display: flex; align-items: center;">
+                        <p class="ekart-product-detail-available-size" style="font-weight: 800;">Material: </p>
+                        <div class="ekart-product-detail-available-size">
+                            <p style="font-weight: 600;">Body:</p> {{product.material.wood}}
+                        </div>
+                        <div *ngIf="product.category==='String'" class="ekart-product-detail-available-size">
+                            <p style="font-weight: 600;">Neck:</p>{{product.material.wood}}
+                        </div>
+                        <div *ngIf="product.category==='Drums'" class="ekart-product-detail-available-size">
+                            <p style="font-weight: 600;">Drumhead:</p>{{product.material.wood}}
+                        </div>
+                        <div *ngIf="product.category==='Drums'" class="ekart-product-detail-available-size">
+                            <p style="font-weight: 600;">Skin:</p>{{product.material.skin}}
+                        </div>
+                        <div *ngIf="product.category==='String'" class="ekart-product-detail-available-size">
+                            <p style="font-weight: 600;">Strings:</p>{{product.material.string}}
+                        </div>
+                    </div>
+                </diV>
+            </div>
+
+            <div class="ekart-product-detail-desc">
+                <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                    <h4>Product Description</h4>
+                </div>
+                <div style="margin-top: 20px">
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="ekart-product-detail-addtoCart">
+            <button class="btn-add-to-cart" *ngIf="product.is_in_inventory ; else notifyMe">ADD TO CART</button>
+            <ng-template #notifyMe>
+                <button class="btn-add-to-cart">NOTIFY ME</button>
+            </ng-template>
+        </div>
+    </div>
+    <div class="overlay" (click)="cancelProductView()"></div>

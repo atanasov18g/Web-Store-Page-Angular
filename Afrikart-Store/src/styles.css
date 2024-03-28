@@ -16,3 +16,7 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+body:has(.requires-no-scroll){
+    position: sticky;
+}

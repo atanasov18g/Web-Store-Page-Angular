@@ -21,6 +21,8 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
 
+  selectedProduct: Product;
+
 
   totalProducts = this.productService.products.length;
   totalProductsOnSale = this.productService.products.filter(p => p.is_on_sale === true).length;

@@ -1,4 +1,6 @@
 
 <search-bar (searchTextChanged)="setSearchText($event)"></search-bar>
 
-<product-list [searchTextOnSibling]="searchTextOnParent"></product-list>
+<product-list [searchTextOnSibling]="searchTextOnParent" #productListComponent ></product-list>
+
+<product-details *ngIf="productListComponent.selectedProduct" [productListCompInput]="productListComponentRef"></product-details>
