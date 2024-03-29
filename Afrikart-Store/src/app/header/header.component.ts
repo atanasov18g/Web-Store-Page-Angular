@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faHippo } from '@fortawesome/free-solid-svg-icons';
+import { faHippo, faKey, faUnlockKeyhole } from '@fortawesome/free-solid-svg-icons';
 import { TopHeaderComponent } from './top-header/top-header.component';
 
 @Component({
@@ -14,7 +14,8 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 })
 export class HeaderComponent {
   faHippo = faHippo;
-
+  faKey = faKey;
+  faUnlockKeyhole = faUnlockKeyhole;
 
   MenuItems: string[] = ['Home','About','Contact','Products'];
 }

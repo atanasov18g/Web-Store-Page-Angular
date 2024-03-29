@@ -35,7 +35,7 @@
     font-family: "Concert One", sans-serif;
 }
 
-.header-anchor{
+.header-anchor {
     all: unset;
 }
 
@@ -69,4 +69,52 @@
 #navcontainer .list-anchors:hover {
     background-image: url(../../assets/images/header-art-image.png) repeat-x #147bba;
     color: #fab885;
+}
+
+
+
+
+
+
+.reg {
+    color: rgba(47, 54, 43);
+    background-color: rgb(223, 139, 61);
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 70px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(5, 5, 5, 0.2);
+    transition: 0.4s;
+    
+}
+
+.log {
+    color: rgb(245, 166, 93);
+    background-color: rgb(31, 46, 22);
+    border: 1px solid rgb(53, 36, 23);
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 70px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(30, 29, 32, 0.2);
+    transition: 0.4s;
+}
+
+.log:hover {
+    color: white;
+    scale: 1.070;
+    box-shadow: 0 0 20px rgba(248, 100, 41, 0.6);
+    background-color: rgba(47, 54, 43);
+}
+
+.reg:hover{
+    color: rgb(223, 139, 61);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    background-color: rgb(47, 54, 43);
 }
