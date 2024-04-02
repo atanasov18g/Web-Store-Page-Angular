@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Product } from "../Models/Product";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class ProductService {
@@ -56,4 +57,18 @@ export class ProductService {
                    "AMInstruments", "Percussive", 29.99, 13, false, 10, 
                    "../../assets/images/_NdongoBells.png", false),         
     ]
+
+
+getAllProducts(){
+    return new Observable((sub) =>{
+        setTimeout(() => {
+            sub.next(this.products)
+        }, 5000)
+    })
 }
+
+
+
+}
+
+

@@ -9,8 +9,8 @@
         <div class="user-container">
             <div>
                 <button class="log" routerLink="Login" > <fa-icon [icon]="faKey"></fa-icon> Login</button>
-                <button class="log" routerLink="Login" [queryParams]="{logout: true}"> <fa-icon [icon]="faDoorOpen"></fa-icon> Logout</button>
-                <button class="reg"> <fa-icon [icon]="faUnlockKeyhole"></fa-icon> Sign up</button>
+                <button class="log" (click)="CheckThis()" *ngIf="check" routerLink="Login" [queryParams]="{logout: true}"> <fa-icon [icon]="faDoorOpen"></fa-icon> Logout</button>
+                <button class="reg" (click)="CheckThis()" *ngIf="!check"> <fa-icon [icon]="faUnlockKeyhole"></fa-icon> Sign up</button>
             </div>
         </div>
         <li>

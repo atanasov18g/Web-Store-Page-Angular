@@ -33,12 +33,14 @@ export class ProductListComponent implements OnInit {
 
 
 
-  ngOnInit(){
-    this.products = this.productService.products;
+  ngOnInit() {
+    this.productService.getAllProducts().subscribe((data: Product[]) => {
+      this.products = data;
+    })
   }
 
 
-selectedFilterRadioButtonOnParent: string = 'all';
+  selectedFilterRadioButtonOnParent: string = 'all';
 
 
   onFilterChanged(value: string) {

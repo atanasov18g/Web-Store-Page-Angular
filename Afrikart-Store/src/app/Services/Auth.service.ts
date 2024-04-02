@@ -18,7 +18,6 @@ export class AuthService {
         } else {
             this.isLogged = true;
         }
-
         return user;
     }
     logout(){
