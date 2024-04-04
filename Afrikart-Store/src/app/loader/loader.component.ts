@@ -10,7 +10,7 @@ import { Component, Input, booleanAttribute } from '@angular/core';
 })
 export class LoaderComponent {
 
-@Input({transform: booleanAttribute}) showLoading: boolean = false;
+@Input() showLoading: boolean = false;
 
 
 showLoader(loading: boolean){

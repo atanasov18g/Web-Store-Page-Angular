@@ -4,27 +4,28 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CommonModule } from '@angular/common';
 import { AddToCartComponent } from '../add-to-cart/add-to-cart.component';
+import { CartComponent } from '../add-to-cart/cart/cart.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [ProductListComponent,SearchBarComponent, ProductDetailsComponent, CommonModule,],
+  imports: [ProductListComponent, SearchBarComponent, ProductDetailsComponent, CommonModule, CartComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
 
-searchTextOnParent: string = '';
+  searchTextOnParent: string = '';
 
 
-@ViewChild(ProductListComponent,{static: true}) productListComponentRef: ProductListComponent;
-//'productListComponent' also the templRef is viable.
+  @ViewChild(ProductListComponent, { static: true }) productListComponentRef: ProductListComponent;
+  //'productListComponent' also the templRef is viable.
 
 
-setSearchText(value: string){
+  setSearchText(value: string) {
 
-this.searchTextOnParent = value;
+    this.searchTextOnParent = value;
 
-}
+  }
 
 }

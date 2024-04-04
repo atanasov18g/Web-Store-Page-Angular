@@ -1,0 +1,138 @@
+.Cart-Container {
+    width: 100%;
+    height: 85%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+    padding-bottom: 10px;
+}
+
+.Header {
+    margin: auto;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Sans-Serif";
+    font-weight: 700;
+    color: #2F3841;
+}
+
+.Action {
+    font-size: 14px;
+    font-family: "Sans-Serif";
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.summary_card {
+    background-color: #fff;
+    width: 350px;
+    height: 140px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.card_item {
+    display: flex;
+    position: relative;
+    margin: 10px 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.card_item .product_img img {
+    height: 80px;
+    margin-right: 20px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+.product_info h1 {
+    font-size: 20px;
+    color: #1e212d;
+    margin: 5px 0;
+}
+
+.product_info p {
+    color: #a1a1a1;
+    font-size: 14px;
+}
+
+.product_rate_info {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pqt {
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+.pqt-plus,
+.pqt-minus {
+    background: #fcfcfc;
+    border: none;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.pqt-plus:hover,
+.pqt-minus:hover {
+    background: #53b5aa;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pqt-plus {
+    line-height: 30px;
+}
+
+.pqt-minus {
+    line-height: 30px;
+}
+
+.order_price,
+.order_service,
+.order_total {
+    display: flex;
+
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.order_price p,
+.order_service p {
+    color: #a1a1a1;
+}
+
+.order_total p {
+    font-weight: 600;
+}

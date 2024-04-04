@@ -1,15 +1,17 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit, Output, inject } from '@angular/core';
 import { Product } from '../../Models/Product';
 import { ProductService } from '../../Services/Product.service';
 import { CommonModule } from '@angular/common';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { FilterProductsComponent } from './filter-products/filter-products.component';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { CartService } from '../../Services/Cart.service';
+import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'product-list',
   standalone: true,
-  imports: [CommonModule, SingleProductComponent, FilterProductsComponent,],
+  imports: [CommonModule, SingleProductComponent, FilterProductsComponent,AddToCartComponent],
   providers: [ProductService],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -17,9 +19,11 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 export class ProductListComponent implements OnInit {
 
   productService: ProductService = inject(ProductService);
-
+  
 
   products: Product[] = [];
+
+
 
   selectedProduct: Product;
 
@@ -46,5 +50,8 @@ export class ProductListComponent implements OnInit {
   onFilterChanged(value: string) {
     this.selectedFilterRadioButtonOnParent = value;
   }
+
+
+
 
 }
