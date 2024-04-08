@@ -6,11 +6,12 @@ import { faFacebook, faInstagram, faXTwitter, } from '@fortawesome/free-brands-s
 import { faUnlockKeyhole, faKey, faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from '../../Services/Auth.service';
 import { CommonModule } from '@angular/common';
+import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'top-header',
   standalone: true,
-  imports: [FontAwesomeModule, RouterLink, CommonModule],
+  imports: [FontAwesomeModule, RouterLink, CommonModule,AddToCartComponent],
   templateUrl: './top-header.component.html',
   styleUrl: './top-header.component.css'
 })

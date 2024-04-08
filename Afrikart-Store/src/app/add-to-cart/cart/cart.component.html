@@ -1,6 +1,13 @@
 <div class="Cart-Container">
     <div class="Header">
-        <h3 class="Heading">Shopping Cart</h3>
+        <div class="arrowhead-flex">
+            <div class="backTo" routerLink="/Products">
+                <fa-icon [icon]="faArrowLeft"></fa-icon>
+                <fa-icon [icon]="faCubesStacked"></fa-icon>
+            </div>
+
+            <h3 class="Heading">Shopping Cart</h3>
+        </div>
         <h5 class="Action">Remove all</h5>
     </div>
 
@@ -14,14 +21,14 @@
                 <div class="product_info">
                     <h1>{{item.name}}</h1>
                     <p>{{item.origin}}</p>
-                    <div class="close-btn">
-                        <i class="fa fa-close"></i>
+                    <div (click)="cartService.deleteItem(item)" class="close-btn">
+                        <fa-icon [icon]="faTrashCan"></fa-icon>
                     </div>
                     <div class="product_rate_info">
                         <h1>$ {{item.price}}</h1>
                         <span (click)="cartService.addLessToCart(item.id)" class="pqt-minus">-</span>
                         <span class="pqt">{{item.quantity}}</span>
-                        <span (click)="cartService.addMoreToCart(item.id)" class="pqt-plus">+</span>
+                        <span (click)="cartService.addMoreToCart(item.id, item)" class="pqt-plus">+</span>
                     </div>
                 </div>
             </div>
@@ -33,14 +40,14 @@
     <hr />
     <div class="order_price">
         <p>Order summary</p>
-        <h4>$400</h4>
+        <h4>${{cartService.getOrderPrice()}}</h4>
     </div>
     <div class="order_service">
-        <p>Additional Service</p>
-        <h4>$10</h4>
+        <p>Additional Service For Every Product</p>
+        <h4>$2</h4>
     </div>
     <div class="order_total">
         <p>Total Amount</p>
-        <h4>$370</h4>
+        <h4>$ {{cartService.getTotalPrice(2)}} </h4>
     </div>
 </div>

@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   @ViewChild(LoaderComponent) loader: LoaderComponent;
 
 
-  showLoading: boolean = true;
+  showLoading: boolean = false;
   router: Router = inject(Router);
 
   ngOnInit() {

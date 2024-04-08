@@ -16,9 +16,23 @@
     align-items: center;
 }
 
+.arrowhead-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.backTo:hover{
+    background-color: #53b5aa;
+    scale: 1.085;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+}
+
 .Heading {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 20px;
     font-size: 35px;
     font-family: "Sans-Serif";
     font-weight: 700;
@@ -63,6 +77,12 @@
     top: 5px;
 }
 
+.close-btn:hover{
+    color: #E44C4C;
+    scale: 1.045;
+    cursor: pointer;
+}
+
 .card_item .product_img img {
     height: 80px;
     margin-right: 20px;
@@ -104,9 +124,14 @@
     padding: 0 15px;
 }
 
-.pqt-plus:hover,
-.pqt-minus:hover {
+.pqt-plus:hover{
     background: #53b5aa;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pqt-minus:hover {
+    background: #b55353;
     color: #fff;
     cursor: pointer;
 }

@@ -1,10 +1,17 @@
-.absolute{
+.absolute {
     position: absolute;
-    top:19%;
+    top: 19%;
     left: 46%;
 }
-.wrap {
-    position: relative;
+
+.absolute:hover {
+    .counter-circle {
+        background-color: rgb(253, 177, 76);
+        color: black;
+    }
+
+    scale: 1.055;
+    cursor: pointer;
 }
 
 .icon {
