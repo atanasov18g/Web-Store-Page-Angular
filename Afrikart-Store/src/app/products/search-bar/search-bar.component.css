@@ -39,3 +39,41 @@
     left: 80%;
     transform: translate(-50%, -50%);
   }
+
+
+/*!!! Add To Cart CSS !!!*/
+
+.absolute {
+  position: absolute;
+  bottom: 123%;
+  left: 105%;
+}
+
+.absolute:hover {
+  .counter-circle {
+      background-color: rgb(253, 177, 76);
+      color: black;
+  }
+
+  scale: 1.055;
+  cursor: pointer;
+}
+
+.icon {
+  top: 10px;
+  left: 40%;
+  position: absolute;
+  font-size: 30px;
+}
+
+.counter-circle {
+  position: absolute;
+  left: 28px;
+  width: 24px;
+  background-color: black;
+  padding: 2px 4px;
+  border-radius: 20px;
+  color: rgb(253, 177, 76);
+  text-align: center;
+  font-weight: 800;
+}

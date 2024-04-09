@@ -4,10 +4,3 @@
 <product-list [searchTextOnSibling]="searchTextOnParent" #productListComponent ></product-list>
 
 <product-details *ngIf="productListComponent.selectedProduct" [prodListCompInput]="productListComponentRef"></product-details>
-
-
-<div class="overlay" *ngIf="showLoading">
-    <div class="loader">
-
-    </div>
-</div>

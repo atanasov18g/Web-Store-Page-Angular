@@ -28,4 +28,8 @@ export class AuthService {
         return this.isLogged
     }
 
+    signUp(email: string, username: string, password: string, rePassword: string){
+        console.log("l");
+    }
+
 }

@@ -9,6 +9,7 @@ export class CartService {
     private items: any[] = JSON.parse(localStorage.getItem('cartItems') || '[]');
     private count: number = 0;
 
+    showCount: boolean = false;
 
 
 
@@ -16,6 +17,8 @@ export class CartService {
 
 
     addToCart(product: any) {
+
+        this.showCount = true;
 
         let prod = { ...product, quantity: 1 }
         let id = prod.id;
@@ -114,9 +117,14 @@ export class CartService {
 
 
     setCount(){
-        if(localStorage.getItem('cartItems') != null){
-            let cartCount = JSON.parse(localStorage.getItem('cartItems'));
+        let cartCount = JSON.parse(localStorage.getItem('cartItems'));
+
+        if(localStorage.getItem('cartItems') != null){   
             this.count = cartCount.length;
+        }
+
+        if(cartCount.length === 0) {
+            this.showCount = false;
         }
 
         return this.count

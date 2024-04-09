@@ -1,0 +1,83 @@
+.reg-container{
+    background-color: #28282B;
+    border: #28282B  1px solid;
+}
+
+
+.wrapper{
+    margin: 50px auto;
+    max-width: 430px;
+    width: 40%;
+    background: #fff;
+    padding: 50px 80px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .wrapper h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+
+  .wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+
+  }
+  .wrapper form .input-box{
+    height: 52px;
+    margin: 20px 0;
+  }
+  form .input-box input{
+    height: 100%;
+    width: 120%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: #4070f4;
+  }
+  form .policy{
+    display: flex;
+    align-items: center;
+  }
+  form h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .input-box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #f4b540;
+    cursor: pointer;
+  }
+  .input-box.button input:hover{
+    background: #332e28;
+    color: #fff;
+  }
+  form .text h3{
+   color: #333;
+   width: 100%;
+   text-align: center;
+  }
+  form .text h3 a{
+    color: #f4a640;
+    text-decoration: none;
+  }
+  form .text h3 a:hover{
+    text-decoration: underline;
+  }
