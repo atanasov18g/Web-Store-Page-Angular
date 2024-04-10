@@ -1,5 +1,7 @@
 <div class="login-form-container">
-    <div class="login-form">
+  <loader *ngIf="showLoading"></loader>
+
+    <div class="login-form" *ngIf="!showLoading">
         <div class="cancel-button-div" >
               <button class="close" routerLink="/Home"><fa-icon class="close-icon" [icon]="faWindowClose"></fa-icon></button>
         </div>

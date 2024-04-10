@@ -2,7 +2,7 @@ import { AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild, inject, 
 import { Router, RouterOutlet, Event, EventType, NavigationStart, NavigationEnd, NavigationCancel } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
-import { LoaderComponent } from './loader/loader.component';
+import { LoaderComponent } from './utility/loader/loader.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,32 +12,32 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'WebStore-Store';
 
   @ViewChild(LoaderComponent) loader: LoaderComponent;
 
 
-  showLoading: boolean = false;
+
   router: Router = inject(Router);
 
 
   private routerEventsSubscription: Subscription;
 
-  ngOnInit() {
-    this.routerEventsSubscription = this.router.events.subscribe((routerEvent: Event) => {
-      if (routerEvent instanceof NavigationStart) {
-        this.showLoading = true;
-      }
-      if (routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel) {
-        this.showLoading = false;
-      }
-    })
-  }
+  // ngOnInit() {
+  //   this.routerEventsSubscription = this.router.events.subscribe((routerEvent: Event) => {
+  //     if (routerEvent instanceof NavigationStart) {
+  //       this.showLoading = true;
+  //     }
+  //     if (routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel) {
+  //       this.showLoading = false;
+  //     }
+  //   })
+  // }
 
-  ngOnDestroy() {
-    this.routerEventsSubscription.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   this.routerEventsSubscription.unsubscribe();
+  // }
 
 }
 

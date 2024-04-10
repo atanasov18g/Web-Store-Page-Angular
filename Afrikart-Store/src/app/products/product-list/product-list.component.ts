@@ -7,16 +7,19 @@ import { FilterProductsComponent } from './filter-products/filter-products.compo
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { CartService } from '../../Services/Cart.service';
 import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
+import { LoaderComponent } from '../../utility/loader/loader.component';
 
 @Component({
   selector: 'product-list',
   standalone: true,
-  imports: [CommonModule, SingleProductComponent, FilterProductsComponent,AddToCartComponent],
+  imports: [CommonModule, SingleProductComponent, FilterProductsComponent,AddToCartComponent, LoaderComponent],
   providers: [ProductService],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent implements OnInit {
+
+  showLoading: boolean = false;
 
   productService: ProductService = inject(ProductService);
   
@@ -38,8 +41,10 @@ export class ProductListComponent implements OnInit {
 
 
   ngOnInit() {
+    this.showLoading = true;
     this.productService.getAllProducts().subscribe((data: Product[]) => {
       this.products = data;
+      this.showLoading = false;
     })
   }
 

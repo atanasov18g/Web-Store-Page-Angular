@@ -63,7 +63,7 @@ getAllProducts(){
     return new Observable((sub) =>{
         setTimeout(() => {
             sub.next(this.products)
-        }, 1000)
+        }, 3555)
     })
 }
 

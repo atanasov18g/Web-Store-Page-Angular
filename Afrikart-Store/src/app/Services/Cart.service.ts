@@ -8,8 +8,9 @@ export class CartService {
 
     private items: any[] = JSON.parse(localStorage.getItem('cartItems') || '[]');
     private count: number = 0;
-
+    
     showCount: boolean = false;
+
 
 
 
@@ -113,6 +114,7 @@ export class CartService {
         return this.items.reduce((acc, item) => {
             return (acc + item.price * item.quantity) + additional;
         }, 0);
+
     }
 
 

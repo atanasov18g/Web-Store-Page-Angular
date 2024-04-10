@@ -10,8 +10,8 @@
 
 /* HTML: <div class="loader"></div> */
 .loader {
-    width: 60px;
-    aspect-ratio: 1;
+    width: 70px;
+    aspect-ratio: 1.1;
     display: grid;
     margin: 0 auto;
     top: 50%;
