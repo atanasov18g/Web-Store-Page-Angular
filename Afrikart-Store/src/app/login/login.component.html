@@ -1,22 +1,27 @@
+<app-snackbar [errorMessage]="errorMsg" *ngIf="errorMsg"></app-snackbar>
+
 <div class="login-form-container">
   <loader *ngIf="showLoading"></loader>
 
-    <div class="login-form" *ngIf="!showLoading">
-        <div class="cancel-button-div" >
-              <button class="close" routerLink="/Home"><fa-icon class="close-icon" [icon]="faWindowClose"></fa-icon></button>
-        </div>
-        <h2>Please Login Here</h2>
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" required #username>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" required #password>
-              
-            <button class="submit" type="submit" (click)="onLoginClicked()">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-          </div>
+  <div class="login-form" *ngIf="!showLoading">
+    <div class="cancel-button-div">
+      <button class="close" routerLink="/Home"><fa-icon class="close-icon" [icon]="faWindowClose"></fa-icon></button>
     </div>
+    <h2>Please Login Here</h2>
+    <form #logForm="ngForm" (ngSubmit)="onLoginSubmit(logForm)" class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" required #email name="email" ngModel>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" required #password name="password" ngModel>
+
+      <button class="submit"type="submit">
+        Login
+      </button>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </form>
+  </div>
 </div>

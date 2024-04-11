@@ -8,6 +8,7 @@ import { AuthService } from '../../Services/Auth.service';
 import { CommonModule } from '@angular/common';
 import { AddToCartComponent } from '../../add-to-cart/add-to-cart.component';
 import { CartService } from '../../Services/Cart.service';
+import { fireBaseAuthService } from '../../Services/firebaseAuth.service';
 
 @Component({
   selector: 'top-header',
@@ -25,6 +26,8 @@ export class TopHeaderComponent {
   faDoorOpen = faDoorOpen;
   faBasketShopping = faBasketShopping;
 
+
+  fireBaseAuthService: fireBaseAuthService = inject(fireBaseAuthService);
   authService: AuthService = inject(AuthService);
   cartService: CartService = inject(CartService);
 
