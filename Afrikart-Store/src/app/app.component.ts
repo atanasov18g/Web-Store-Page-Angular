@@ -4,11 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './utility/loader/loader.component';
 import { Subscription } from 'rxjs';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CommonModule, LoaderComponent],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, LoaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

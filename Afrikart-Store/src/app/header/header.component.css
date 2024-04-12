@@ -30,6 +30,11 @@
     align-items: center;
 }
 
+.Logo--Wrapper:hover {
+    scale: 1.013;
+    cursor: pointer;    
+}
+
 .Logo {
     font-size: 75px;
     font-family: "Concert One", sans-serif;
@@ -88,7 +93,7 @@
     padding: 10px 0;
     box-shadow: 0 0 20px rgba(5, 5, 5, 0.2);
     transition: 0.4s;
-    
+
 }
 
 .log {
@@ -113,7 +118,7 @@
     background-color: rgba(47, 54, 43);
 }
 
-.reg:hover{
+.reg:hover {
     color: rgb(223, 139, 61);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     background-color: rgb(47, 54, 43);

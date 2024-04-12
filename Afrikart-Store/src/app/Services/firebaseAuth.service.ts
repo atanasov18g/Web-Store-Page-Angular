@@ -41,6 +41,11 @@ export class fireBaseAuthService {
         }))
     }
 
+    logout(){
+        this.user.next(null);
+        alert('You are now logged out!')
+    }
+
 
     private handleCreateUser(res) {
         const expiresInTime = new Date().getTime() + +res.expiresIn * 1000;

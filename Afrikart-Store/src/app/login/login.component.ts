@@ -57,6 +57,7 @@ export class LoginComponent {
       next: (res) => {
         console.log(res);
         this.showLoading = false;
+        this.router.navigate(['/Products'])
       },
       error: (errMsg) => {
         this.showLoading = false;

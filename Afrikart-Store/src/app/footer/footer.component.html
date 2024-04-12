@@ -1,0 +1,36 @@
+<div class="dashboard-container">
+    <div class="just-flex">
+        <div style="width: 50%">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="width-align-right">
+            <button class="create-task-btn">Create Task</button>
+            <button class="create-task-btn">Fetch Tasks</button>
+            <button class="create-task-btn">Clear Tasks</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="dashboard-item-container">
+        <div class="task-item">
+            <div class="task-title">
+                <h3>Task Title</h3>
+            </div>
+            <p><b>Assigned to: </b>John Smith</p>
+            <p><b>Priority: </b>High</p>
+            <p><b>Status: </b>In Progress</p>
+            <div class="task-action-icons">
+                <button class="task-action-btn" title="Detail">
+                    <fa-icon [icon]="faInfoCircle"></fa-icon>
+                </button>
+                <button class="task-action-btn" title="Edit">
+                    <fa-icon [icon]="faPencilSquare"></fa-icon>
+                </button>
+                <button class="task-action-btn" title="Delete">
+                    <fa-icon [icon]="faTrashCan"></fa-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
