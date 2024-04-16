@@ -1,4 +1,5 @@
 export class fireUser {
+    
     constructor(
         public email: string,
         public id: string,

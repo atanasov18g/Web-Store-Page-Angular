@@ -34,11 +34,24 @@ hr {
     margin: 0px 5px;
     border: none;
     background-color: transparent;
+    font-size: 17px;
 }
 
-i {
-    font-size: 16px;
+.task-action-btn:hover{
+    .pencil{
+        color: rgb(255, 182, 113);
+    }
+    .trash{
+        color: rgb(255, 113, 113);
+    }
+    .info{
+        color: rgb(113, 175, 255);
+    }
+    
+    cursor: pointer;
+    scale: 1.041;
 }
+
 
 .task-item {
     width: 23%;
@@ -74,6 +87,12 @@ i {
     background-color: #3498DB;
     border: #cdcdcd 1px solid;
     color: white;
+}
+
+.create-task-btn:hover{
+    background-color: #2f6680;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .loader {

@@ -1,36 +1,53 @@
+<app-create *ngIf="showCreateTaskForm" (CloseForm)="CloseCreateTaskForm()" (EmitTaskData)="CreateUpdateTask($event)"
+    [editOn]="editOn" [selectedTask]="selectedTask">
+
+</app-create>
+
+
+
 <div class="dashboard-container">
+    <app-snackbar *ngIf="errorMessage">{{errorMessage}}</app-snackbar>
+    <loader *ngIf="showLoading"></loader>
     <div class="just-flex">
         <div style="width: 50%">
             <h2>Dashboard</h2>
         </div>
         <div class="width-align-right">
-            <button class="create-task-btn">Create Task</button>
-            <button class="create-task-btn">Fetch Tasks</button>
-            <button class="create-task-btn">Clear Tasks</button>
+            <button class="create-task-btn" (click)="OpenCreateTaskForm()">Create Task</button>
+            <button class="create-task-btn" (click)="FetchTasksClick()">Refresh Tasks</button>
+            <button class="create-task-btn" (click)="DeleteAllTasks()">Clear Tasks</button>
         </div>
     </div>
 
     <hr>
 
+
     <div class="dashboard-item-container">
-        <div class="task-item">
+
+        <div style="text-align: center;" *ngIf="allTasks.length < 1">
+            <h2> No task has been created yet! </h2>
+        </div>
+
+        @for (task of allTasks; track task) {
+        <div *ngIf="!showLoading" class="task-item" [ngClass]="'task-' + task.status">
             <div class="task-title">
-                <h3>Task Title</h3>
+                <h3>{{task.title}}</h3>
             </div>
-            <p><b>Assigned to: </b>John Smith</p>
-            <p><b>Priority: </b>High</p>
-            <p><b>Status: </b>In Progress</p>
+            <p><b>Assigned to: </b>{{task.assignedTo}}</p>
+            <p><b>Priority: </b>{{task.priority}}</p>
+            <p><b>Status: </b>{{task.status}}</p>
             <div class="task-action-icons">
                 <button class="task-action-btn" title="Detail">
-                    <fa-icon [icon]="faInfoCircle"></fa-icon>
+                    <fa-icon class="info" [icon]="faInfoCircle"></fa-icon>
                 </button>
-                <button class="task-action-btn" title="Edit">
-                    <fa-icon [icon]="faPencilSquare"></fa-icon>
+                <button class="task-action-btn" title="Edit" (click)="OnEditTask(task.id)">
+                    <fa-icon class="pencil" [icon]="faPencilSquare"></fa-icon>
                 </button>
                 <button class="task-action-btn" title="Delete">
-                    <fa-icon [icon]="faTrashCan"></fa-icon>
+                    <fa-icon class="trash" (click)="DeleteTask(task.id)" [icon]="faTrashCan"></fa-icon>
                 </button>
             </div>
         </div>
+        }
     </div>
 </div>
