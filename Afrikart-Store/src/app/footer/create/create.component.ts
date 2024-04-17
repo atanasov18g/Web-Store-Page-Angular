@@ -3,11 +3,13 @@ import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChil
 import { ReactiveFormsModule, NgForm, FormControl, FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Task } from '../../Models/Task';
+import { TaskService } from '../../Services/Task.service';
 
 @Component({
   selector: 'app-create',
   standalone: true,
   imports: [CommonModule, RouterLink, ReactiveFormsModule, FormsModule],
+  providers: [TaskService],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })

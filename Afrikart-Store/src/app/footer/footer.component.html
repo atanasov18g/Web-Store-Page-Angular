@@ -3,11 +3,18 @@
 
 </app-create>
 
+<app-details 
+[currentTask]="currentTask"
+(closeView)="closeTaskDetails()" 
+*ngIf="showTaskDetails"></app-details>
 
 
 <div class="dashboard-container">
-    <app-snackbar *ngIf="errorMessage">{{errorMessage}}</app-snackbar>
+
+    <app-snackbar *ngIf="errorMessage" [errorMessage]="errorMessage"></app-snackbar>
+
     <loader *ngIf="showLoading"></loader>
+
     <div class="just-flex">
         <div style="width: 50%">
             <h2>Dashboard</h2>
@@ -20,7 +27,6 @@
     </div>
 
     <hr>
-
 
     <div class="dashboard-item-container">
 
@@ -37,7 +43,7 @@
             <p><b>Priority: </b>{{task.priority}}</p>
             <p><b>Status: </b>{{task.status}}</p>
             <div class="task-action-icons">
-                <button class="task-action-btn" title="Detail">
+                <button class="task-action-btn" (click)="showDetails(task.id)" title="Detail">
                     <fa-icon class="info" [icon]="faInfoCircle"></fa-icon>
                 </button>
                 <button class="task-action-btn" title="Edit" (click)="OnEditTask(task.id)">
